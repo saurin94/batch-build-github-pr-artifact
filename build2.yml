@@ -9,5 +9,5 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: build2_artifact
+  base-directory: ./test/build2_artifact
   name: ARTIFACT_NAME_2
