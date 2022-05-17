@@ -8,7 +8,7 @@ batch:
     - identifier: build2
       env:
         compute-type: BUILD_GENERAL1_MEDIUM
-      buildspec: build1.yml
+      buildspec: build2.yml
 phases:
   build:
     commands:
