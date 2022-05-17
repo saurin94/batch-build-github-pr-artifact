@@ -4,9 +4,10 @@ phases:
     commands:
       - mkdir build2_artifact
       - echo 'build2-file1'$CODEBUILD_BUILD_BATCH_NUMBER > build2_output_file
-      - echo $ARTIFACT_NAME_1
       - mv build2_output_file build2_artifact
       - export ARTIFACT_NAME_2=build2batch$CODEBUILD_BUILD_BATCH_NUMBER
+      - echo $ARTIFACT_NAME_1
+      - ls -al build1_artifact
 artifacts:
   files:
     - '**/*'
