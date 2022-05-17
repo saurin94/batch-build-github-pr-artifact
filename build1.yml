@@ -1,0 +1,12 @@
+phases:
+  build:
+    commands:
+      - mkdir build1_artifact
+      - echo 'build1-file1'$CODEBUILD_BUILD_BATCH_NUMBER > build1_output_file
+      - mv build1_output_file build1_artifact
+      - export ARTIFACT_NAME_1=build1batch$CODEBUILD_BUILD_BATCH_NUMBER
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build1_artifact
+  name: ARTIFACT_NAME_1

@@ -1,0 +1,17 @@
+version: 0.2
+batch:
+  build-list:
+    - identifier: build1
+      env:
+        compute-type: BUILD_GENERAL1_SMALL
+      buildspec: build1.yml
+    - identifier: build2
+      env:
+        compute-type: BUILD_GENERAL1_MEDIUM
+      buildspec: build1.yml
+phases:
+  build:
+    commands:
+      - mkdir combine_artifacts_codebuild
+      - echo 'file' > output_file
+      - mv output_file combine_artifacts_codebuild
