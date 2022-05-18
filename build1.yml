@@ -3,9 +3,16 @@ phases:
   build:
     commands:
       - mkdir build1_artifact
-      - echo 'build1-file1'$CODEBUILD_BUILD_BATCH_NUMBER > build1_output_file
-      - mv build1_output_file build1_artifact
-      - export ARTIFACT_NAME_1=build1batch$CODEBUILD_BUILD_BATCH_NUMBER
+      - mkdir sub_folder_1
+      - mkdir sub_folder_2
+      - echo 'build1-file1'$CODEBUILD_BUILD_BATCH_NUMBER > file0
+      - echo 'build1-file2'$CODEBUILD_BUILD_BATCH_NUMBER > file1
+      - echo 'build1-file3'$CODEBUILD_BUILD_BATCH_NUMBER > file2
+      - mv file1 sub_folder_1
+      - mv file2 sub_folder_2
+      - mv file0 build1_artifact
+      - mv sub_folder_1 build1_artifact
+      - mv sub_folder_2 build1_artifact
 artifacts:
   files:
     - '**/*'
