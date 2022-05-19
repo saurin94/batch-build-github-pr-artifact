@@ -18,7 +18,7 @@ phases:
       - echo 'file9' > file9
       - mv file1 file3 sub_folder_1
       - mv file2 file5 sub_folder_2
-      - mv file0 file4 file6 file7 file8 file9 file10 build1_artifact
+      - mv file0 file4 file6 file7 file8 file9 build1_artifact
       - mv sub_folder_1 build1_artifact
       - mv sub_folder_2 build1_artifact
 artifacts:
